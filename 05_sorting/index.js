@@ -1,12 +1,12 @@
 function swap(arr, left, right){
-  let temp = arr[left];
+  let t = arr[left];
   arr[left] = arr[right];
-  arr[right] = temp;
+  arr[right] = t;
 }
 
 function bubbleSort(arr){
-  for (let i in arr){
-    for( let j = arr.length - 1; j > i; j--){
+  for (let k in arr){
+    for( let j = arr.length - 1; j > k; j--){
       if(arr[j] < arr[j - 1]){
         swap(arr, j - 1, j);
       }
@@ -17,13 +17,13 @@ function bubbleSort(arr){
 
 
 function selectionSort(arr){
-  for(let i in arr){
-    let minIndex = i;
-    for(let j = i; j < arr.length; j++){ 
+  for(let k in arr){
+    let minIndex = k;
+    for(let j = k; j < arr.length; j++){ 
       if(arr[j] < arr[minIndex])
         minIndex = j;
     }
-    swap(arr, i, minIndex);
+    swap(arr, k, minIndex);
   }
   return arr;
 }
