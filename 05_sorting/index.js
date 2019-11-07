@@ -29,8 +29,8 @@ function selectionSort(arr){
 }
 
 function insertionSort(arr){
-  for(let i = 0; i < arr.length - 1; i++){
-    for(let j = i + 1; j >= 0; j--){
+  for(let k = 0; k < arr.length - 1; k++){
+    for(let j = k + 1; j >= 0; j--){
       if(arr[j] < arr[j - 1]){
         swap(arr, j - 1, j);
       }else{
@@ -71,9 +71,9 @@ function mergeSort(arr){
 function partition(arr, left, right, pivot){
   let index = left;
 
-  for(let i = left; i < right; i++){
-    if(arr[i] < arr[pivot]){
-      swap(arr, i, index);
+  for(let k = left; k < right; k++){
+    if(arr[k] < arr[pivot]){
+      swap(arr, k, index);
       index++;
     }
   }
