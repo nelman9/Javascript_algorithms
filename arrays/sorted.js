@@ -7,14 +7,14 @@ class MyArray{
   }
 
   search(val, start = 0, end = (this.arr.length - 1)){
-    let mid = Math.floor( (start + end) / 2);
-    if(val === this.arr[mid])
-      return this.arr[mid];
+    let middle = Math.floor( (start + end) / 2);
+    if(val === this.arr[middle])
+      return this.arr[middle];
     
-    if(val > this.arr[mid] && (mid + 1 <= end))
-      return this.search(val, mid + 1, end);
+    if(val > this.arr[middle] && (middle + 1 <= end))
+      return this.search(val, middle + 1, end);
     
-    if(val < this.arr[mid] && start <= mid)
+    if(val < this.arr[middle] && start <= mid)
       return this.search(val, start, mid);
       
     return null;
